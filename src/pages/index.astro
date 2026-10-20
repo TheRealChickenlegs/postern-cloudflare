@@ -24,7 +24,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						Postern is a menu-bar app plus a File Provider extension. Each saved connection is a File Provider domain, so it appears in Finder's Locations sidebar as Postern - <name> (just Postern when there is only one connection), 
 						is reachable at ~/Library/CloudStorage/Postern-<name>, and supports ordinary drag, copy, paste, and Trash.
 
-						macOS composes that sidebar label from the app and the domain; the app cannot make it show only the connection name. See REVIEW.md §12.
+						macOS composes that sidebar label from the app and the domain; the app cannot make it show only the connection name.
 
 					</p>
 
@@ -48,7 +48,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 <style>
 	main {
-		width: 960px;
+		width: min(1200px, calc(100% - 2rem));
 	}
 
 	.home-layout {

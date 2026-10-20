@@ -14,20 +14,30 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<div class="home-layout">
-				<img src="/underdeep.png" alt="Underdeep dungeon crawler artwork" />
 				<div class="home-content">
-					<h1>Hello, Dungeon Crawler!</h1>
+					<h1>Postern - Mac Application</h1>
 					<p>
-						Underdeep is a single-player dungeon crawler for iPhone and iPad, 
-						in the tradition of the classic roguelikes. 
+						Servers as locations in Finder — browse, copy to and from, rename, and delete like any folder.
 					</p>
 
 					<p>
-						<em>Fifty floors down, something waits.</em>
+						Postern is a menu-bar app plus a File Provider extension. Each saved connection is a File Provider domain, so it appears in Finder's Locations sidebar as Postern - <name> (just Postern when there is only one connection), 
+						is reachable at ~/Library/CloudStorage/Postern-<name>, and supports ordinary drag, copy, paste, and Trash.
+
+						macOS composes that sidebar label from the app and the domain; the app cannot make it show only the connection name. See REVIEW.md §12.
+
 					</p>
 
 					<p>
-						Use the menu links above to nagivate to the pages you seek.
+						Connections can be SFTP, FTP, WebDAV, or WebDAV over HTTPS; the type is chosen from a list when the connection is created. 
+						FTP and plain WebDAV are unencrypted, so the editor warns before saving one. HTTPS uses the system trust store — a certificate that macOS does not trust will refuse to connect, 
+						which is the intended behaviour.
+
+					</p>
+
+					<p>
+						The menu-bar item is the primary way in. The app also keeps a Dock icon, because it owns windows (the connection editor and the host-key prompt) 
+						and macOS offers no way to bring an agent's window forward once it slips behind another app.
 					</p>
 				</div>
 			</div>

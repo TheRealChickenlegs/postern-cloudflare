@@ -1,4 +1,8 @@
-# Privacy Policy
+---
+title: "Postern Privacy Policy"
+description: "Privacy Policy details for Postern."
+pubDate: "Oct 20 2026"
+---
 
 **Postern for macOS** · Effective 20 October 2026
 

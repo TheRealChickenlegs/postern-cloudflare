@@ -1,4 +1,8 @@
-# Postern Support
+---
+title: "Postern Support"
+description: "Support details for Postern."
+pubDate: "Oct 20 2026"
+---
 
 Postern connects to SFTP, FTP, FTPS, WebDAV, and WebDAVS servers and shows them
 in Finder, so you can browse, copy, rename, and delete files like any folder.

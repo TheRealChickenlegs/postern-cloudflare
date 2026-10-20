@@ -1,140 +1,117 @@
----
-title: "Underdeep — Privacy Policy"
-description: "Underdeep Privacy Policy"
-pubDate: "Sep 30 2026"
----
+# Privacy Policy
 
-**Effective date: 30 September 2026**
-**Last updated: 30 September 2026**
+**Postern for macOS** · Effective 20 October 2026
 
-Underdeep is a single-player dungeon crawler for iPhone and iPad, published by
-Ryan McFadden ("we", "us"). This policy explains what the app does with your
-information.
+Postern connects to file servers that you choose and shows them in Finder. This
+policy explains what happens to information when you use the app, its Finder
+extension, and this website.
 
-The short version: **we do not collect anything about you.** The game runs
-entirely on your device. The only third party involved is the advertising
-network that serves ads to players who have not bought the unlock.
+In short: the app keeps your connections and credentials on your Mac and sends
+them only to the servers you configure. We do not collect, see, sell, or share
+them.
 
----
+## Who we are
 
-## 1. Information we collect ourselves
+Postern is developed and published by Ryan McFadden ("we", "us"). For privacy
+questions, contact **support@honestlymylove.com**.
 
-**None.**
+## What Postern stores on your Mac
 
-Underdeep has no accounts, no sign-in, and no servers of our own. We do not ask
-for your name, email address, or any other personal detail, and there is nowhere
-for the app to send them.
+Postern keeps everything it needs locally, in your macOS Keychain:
 
-## 2. Information stored on your device
+- Connection details you enter: display name, protocol, server address, port,
+  username, and optional starting directory.
+- Authentication secrets: passwords or SSH private keys.
+- SSH host keys you have reviewed and approved.
+- Loopback relay endpoints used while a connection is active.
 
-The app saves the following locally, in its own storage on your device:
+These items use Keychain services whose names begin with
+`com.honestlymylove.isftp`, and they are accessible only to Postern and its
+Finder extension. They are protected by your macOS account and Keychain. We
+cannot read them.
 
-| What | Why |
-|---|---|
-| Saved characters and dungeon state | So you can continue a run |
-| Settings (sound, haptics, accessibility options) | So your preferences persist |
-| High score records | So the Hall of Records can show your past runs |
+Postern does not create an account and does not store your information on any
+server that we operate.
 
-This data never leaves your device. It is not transmitted to us or to anyone
-else. Deleting the app deletes all of it. You can also erase it from within the
-app's settings.
+## What leaves your Mac
 
-## 3. Advertising
+When you open or use a connection, Postern connects directly to the server you
+configured, using the protocol you selected: SFTP, FTP, FTPS, WebDAV, or
+WebDAVS. Your credentials are sent to that server as part of its normal
+authentication, and the server operator's privacy practices apply to that
+exchange.
 
-Underdeep shows interstitial ads to players who have not purchased the unlock.
-Ads are served by **Google AdMob**.
+We do not receive a copy of your files, credentials, server addresses, or usage.
+There is no Postern account, cloud service, or telemetry endpoint.
 
-To serve ads, Google may collect and process:
+FTP sends credentials and data unencrypted. Prefer SFTP, FTPS, or WebDAVS on
+networks you do not control.
 
-- Your device's advertising identifier (IDFA), **only if you grant permission**
-  when iOS asks
-- Your IP address, from which a coarse, city-level location may be inferred
-- Device type, operating system version, and language
-- Which ads were shown and whether they were interacted with
+## Purchases
 
-Google acts as an independent controller for this data. Their practices are
-governed by Google's own privacy policy:
-<https://policies.google.com/privacy>
+Postern Full is a one-time in-app purchase processed by Apple. Apple handles
+payment and may provide us with anonymised sales and entitlement information. We
+never receive your payment details. Apple's handling of your information is
+governed by [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
 
-Google's use of advertising identifiers is described at:
-<https://policies.google.com/technologies/partner-sites>
+## Diagnostics
 
-### Your choices
+Postern does not include analytics, advertising, or third-party tracking SDKs.
+macOS and the App Store may collect crash reports and usage diagnostics
+according to your system settings. That collection is controlled by Apple and
+your preferences, not by us.
 
-- **App Tracking Transparency.** On first launch iOS will ask whether Underdeep
-  may track you across other apps and websites. If you decline, you will still
-  see ads, but they will not be personalised using your advertising identifier.
-  You can change this at any time in **Settings → Privacy & Security → Tracking**.
-- **Consent for personalised ads.** Where required by law (for example under the
-  GDPR in the European Economic Area, the UK, or under CCPA/CPRA in California),
-  the app asks for your consent before any advertising identifier is used, and
-  you can withdraw it at any time from the app's settings.
-- **Buying the unlock removes all advertising**, and with it all of the above.
-  The ad SDK is not initialised at all once you have bought the unlock.
+## This website
 
-## 4. Purchases
+Our web host may record standard server logs (such as IP address, user agent,
+requested page, and time) when you visit this site. We use them only to operate
+and secure the site. We do not use advertising or analytics cookies, and we do
+not build profiles of visitors.
 
-In-app purchases are processed entirely by **Apple**. We never see or store your
-payment details, your name, or your address. We receive only an anonymous
-confirmation that a purchase was made, which is what unlocks the app. Apple's
-handling of your data is governed by Apple's privacy policy:
-<https://www.apple.com/legal/privacy/>
+## Sharing and selling
 
-## 5. What we do not do
+We do not sell, rent, or share personal information. We hold no user database to
+share.
 
-- We do not collect analytics or crash reports in this version.
-- We do not sell your personal information.
-- We do not share information with anyone other than the advertising provider
-  described above.
-- We do not knowingly collect information from children under 13.
+## Retention and deletion
 
-## 6. Children
+Connection details and credentials remain on your Mac until you delete the
+connection, which also removes its stored secret, or until you remove the app and
+its Keychain items. To remove items manually, open **Keychain Access**, search
+for `com.honestlymylove.isftp`, and delete the matching entries. Deleting the app
+does not automatically remove Keychain items that macOS retains. Server logs for
+this website are kept only as long as the hosting provider's standard retention
+period and are then discarded.
 
-Underdeep is not directed at children under 13. We do not knowingly collect
-personal information from children. If you believe a child has provided
-information to us, contact us and we will act on it.
+## Security
 
-## 7. Your rights
+Credentials and host keys are stored in the macOS Keychain. SFTP, FTPS, and
+WebDAVS connections are encrypted in transit. Postern verifies SSH host keys and
+refuses an unknown or changed key until you approve it in the app.
 
-Because we hold no personal data about you, there is nothing for us to export,
-correct, or delete on your behalf. For data held by Google in connection with
-advertising, use the Google controls linked in section 3, or contact us and we
-will pass on your request.
+No method of storage or transmission is completely secure, but Postern is
+designed to keep your information on your Mac and on the servers you choose.
 
-If you are in the EEA, the UK, Switzerland, California, or another jurisdiction
-with data protection legislation, you have rights of access, rectification,
-erasure, restriction, and objection in respect of personal data. In practice we
-hold none; the rights that matter to you here are the advertising controls in
-section 3.
+## Children
 
-## 8. Data retention
+Postern is a general-purpose utility and is not directed at children. We do not
+knowingly collect information from anyone, including children under 13.
 
-We retain nothing. Locally stored game data persists on your device until you
-delete it or delete the app. Google retains advertising data according to its own
-policies.
+## Your rights
 
-## 9. Security
+Other than the standard server logs described above, we do not collect personal
+information, so there is generally nothing for us to access, correct, export, or
+delete on your behalf. If you believe we hold
+information about you, contact us and we will respond. Nothing in this policy
+limits rights you have under applicable law.
 
-Game data is stored in the app's sandboxed container, protected by iOS. No data
-is transmitted to us, so there is no transmission for us to secure. Ad-related
-network traffic uses HTTPS.
+## Changes
 
-## 10. International transfers
+If this policy changes, we will update the effective date above and, for material
+changes, note them in the app or on this page.
 
-We do not transfer data internationally because we do not receive any. Google may
-transfer advertising data internationally under its own safeguards.
+## Contact
 
-## 11. Changes to this policy
+Email **support@honestlymylove.com**. We aim to reply within two business days.
 
-If this policy changes materially — for example if a future version adds
-analytics or crash reporting — we will update this page and change the "last
-updated" date above. Continued use after a change constitutes acceptance.
-
-## 12. Contact
-
-Questions about this policy, or about privacy in Underdeep:
-
-**Ryan McFadden**
-Email: <support@honestlymylove.com>
-
-We aim to respond within five working days.
+Support: <https://postern.honestlymylove.com/site/support/>
